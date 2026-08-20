@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Statute — Before You Hire</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="wrap"><div class="top"><div><b>STATUTE</b> <span class="muted">Before You Hire</span></div><div id="topRight"></div></div>
+<div id="authCard" class="card">
+<div class="tabs"><button id="signupTab" class="active">Create account</button><button id="loginTab">Sign in</button></div>
+<div id="signupPanel" style="margin-top:16px"><div class="grid"><div><label>Name</label><input id="signupName"></div><div><label>Email</label><input id="signupEmail" type="email"></div><div class="full"><label>Company name</label><input id="signupCompany"></div></div><p class="muted">We'll send a passwordless email link/code.</p><button id="signupBtn">Create account</button><div id="signupMsg"></div></div>
+<div id="loginPanel" class="hidden" style="margin-top:16px"><label>Email</label><input id="loginEmail" type="email"><p class="muted">We'll send a passwordless sign-in email.</p><button id="loginBtn">Send sign-in email</button><div id="loginMsg"></div></div>
+</div>
+
+<div id="appView" class="hidden">
+<div class="notice">Pilot informational tool only. Real customer use requires reviewed and approved legal-source data.</div>
+<div class="card"><h2>Check a new hire</h2><div class="grid">
+<div><label>Worker name (optional)</label><input id="workerName"></div><div><label>Role</label><input id="role"></div>
+<div><label>Company state</label><select id="companyState"><option value="CO">Colorado</option></select></div>
+<div><label>Worker state</label><select id="workerState"><option value="CO">Colorado</option><option value="CA">California</option><option value="TX">Texas</option><option value="NY">New York</option><option value="WA">Washington</option><option value="IL">Illinois</option></select></div>
+<div><label>Worker type</label><select id="workerType"><option value="employee">Employee</option><option value="contractor">Contractor</option><option value="freelancer">Freelancer</option><option value="partner">Business Partner</option><option value="advisor">Advisor</option><option value="intern">Intern</option></select></div>
+<div><label>Arrangement</label><select id="arrangement"><option value="remote">Remote</option><option value="hybrid">Hybrid</option><option value="onsite">Onsite</option></select></div>
+<div><label>Employment basis</label><select id="employmentBasis"><option value="fulltime">Full-time</option><option value="parttime">Part-time</option></select></div>
+<div><label>Compensation</label><input id="compensation" placeholder="$135,000 / year"></div>
+<div class="full"><label>Expected start date</label><input id="startDate" type="date"></div>
+</div><div id="extraFields" style="margin-top:14px"></div><div style="margin-top:16px"><button id="runBtn">Run check</button> <span id="runMsg"></span></div></div>
+<div id="resultCard" class="card hidden"></div>
+<div class="card"><h2>Hiring Compliance Files</h2><div id="caseList" class="muted">Loading...</div></div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script></body></html>
